@@ -1,0 +1,38 @@
+#slideContainer { 
+        width: 799px;
+        height: 533px;
+        animation-name: slide;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+/* 5 imagens */
+@keyframes slide {
+    0%  { background-image: url('imagens/10264461753_de55cb1721_c.jpg'); } 
+    20% { background-image: url('imagens/14216021893_a243b314ee_c.jpg'); } 
+    40% { background-image: url('imagens/31591746723_5b2c101f1a_c.jpg'); } 
+    60% { background-image: url('imagens/39893901830_909b292fcf_c.jpg'); } 
+    80% { background-image: url('imagens/7740405218_deedfa35cb_c.jpg');} 
+    100% { background-image: url('imagens/10264461753_de55cb1721_c.jpg'); } 
+    }  
+  
+    
+body { font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}    
+
+header {    display: flex; 
+            align-items: center;
+            justify-content: space-between;
+
+            width: 799px;
+            margin-left: auto;
+            margin-right: auto;
+       }  
+       
+
+main {  width: 799px;
+        margin-left: auto;
+        margin-right: auto;
+}
