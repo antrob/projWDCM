@@ -1,0 +1,198 @@
+/* myZoo.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500&display=swap');
+
+body {
+        font-family: 'Montserrat', sans-serif;
+        margin:0;
+     }
+
+
+/* header */     
+header { 
+        background-image: url(imagens/backverde.png);
+
+        display: flex;
+        align-items: center;
+
+        justify-content: space-around;
+       }
+
+a { 
+    text-decoration: none;
+  }
+  
+nav a { 
+        color:white;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-right: 1em;
+      } 
+      
+header img { margin:5px 0;}
+
+header button { 
+        background-color: #e7b650;
+        color:#a63927;
+        padding: 0.5em 1em;
+
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: 600;
+
+        border-style: none;
+        border-radius: 0.75em;
+       }    
+
+.fa-bars { display: none;}       
+
+/* section #destaque */
+#destaque { 
+            font-family: 'Vesper Libre', serif;
+            margin-top: 30px;
+
+            display: flex;
+            justify-content: center;
+        }  
+
+#destaque h3 { 
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 1.2;
+            margin-bottom: 0;
+           }  
+#destaque p { margin-top: 4px;}
+           
+#destaque h3 span { display: block;}     
+
+#planeie, #apadrinhe {  
+                        /* width: 400px; */
+                        width: 25%;
+                        min-width: 300px;
+                        display: flex;
+                        align-items: center;
+                     } 
+
+                   
+#planeie { 
+            background-color: #819f39;
+            color:#ebc54f;
+            margin-right: 5em;
+         }
+
+#apadrinhe { 
+            background-color: #b2cd5e;
+            color:#54803b;
+         }
+
+#planeie img, #apadrinhe img { margin-left: -20px;}  
+
+#planeie i, #apadrinhe i { 
+                            /* margin-left: auto; ou */
+                            flex-grow: 1;
+                            text-align: right; 
+                            margin-right: 1em; 
+                        } 
+
+
+/* section #animais */
+#animais { 
+                        
+                        margin-top: 30px;
+                        border-top: solid 1px #83b141;
+                        padding-top: 1.5em;        
+
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+                }
+
+.animal { width: 30%; margin-bottom: 1em;}
+
+.animal img { max-width: 100%; cursor:pointer;}
+.animal img:hover { transform: scale(1.2);}
+
+.fotoAnimal p { display: none;}
+.animal img:active + p  { 
+                        display: block;
+                        background-color: rgba(0,0,0,0.5); 
+                        color:white;
+                        margin:0;
+                        line-height: 1.5;
+                        padding:1em;
+                
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom:0;
+                        }
+
+.fotoAnimal { overflow: hidden; position:relative; }
+
+
+.animal h3 { 
+                color:#5a7b9e; 
+                margin-bottom: 0.25em;
+                margin-top: 0.5em;
+        }
+.animal p { font-style: italic; margin-top: 0;}
+
+
+/* Media Queries */
+
+
+@media screen and ( min-width:768px ) and (max-width:1024px) {
+
+        /* Os animais são dispostos 2 a 2 */
+        .animal { width: 45%; }
+}
+
+@media screen and (max-width:768px) {
+
+        /* No header a Navegação desaparece */
+        nav { display: none; }       
+        
+        .fa-bars { 
+                display: inline-block;
+                font-size:2em;
+                color:white;
+                order:-1;
+        }
+
+
+        /* Os destaques aparecem empilhados */
+        
+        #destaque { display: block; }
+
+        #planeie, #apadrinhe {  
+
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                
+                justify-content: space-between;
+
+                margin-bottom: 2em;
+             } 
+
+        #planeie img, #apadrinhe img { margin-left: 0px;}  
+
+        #planeie i, #apadrinhe i { 
+                                flex-grow: 0; 
+                                }      
+
+        /* Os animais aparecem empilhados */
+        #animais { display: block;}
+        
+        .animal { 
+                width: 80%; 
+                margin-left: auto; 
+                margin-right: auto;
+
+                margin-bottom: 2.5em;
+        }
+
+}
+       
